@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+
+void swapByReference(int &x, int &y) {
+    int temp = x;
+    x = y;
+    y = temp;
+}
+
+void swapByPointer(int *x, int *y) {
+    int temp = *x;
+    *x = *y;
+    *y = temp;
+}
+
+int main() {
+    int a = 10, b = 20;
+    int c = 30, d = 40;
+
+    cout << "Before swapping by reference: a = " << a << ", b = " << b << endl;
+    swapByReference(a, b);
+    cout << "After swapping by reference: a = " << a << ", b = " << b << endl;
+
+    cout << "\nBefore swapping by pointer: c = " << c << ", d = " << d << endl;
+    swapByPointer(&c, &d);  
+    cout << "After swapping by pointer: c = " << c << ", d = " << d << endl;
+
+    return 0;
+}

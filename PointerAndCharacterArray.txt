@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    char msg[] = "hello";
+    char *ptr = msg;  // Pointer to the character array
+
+    *ptr = 'm';  // Modify the first character
+    ptr++;
+    *ptr = 'e';  // Modify the second character
+    ptr++;
+    *ptr = 'l';  // Modify the third character
+    ptr++;
+    *ptr = 'l';  // Modify the fourth character
+    ptr++;
+    *ptr = 'o';  // Modify the fifth character
+
+    cout << msg << endl;  // Print the modified string
+    return 0;
+}

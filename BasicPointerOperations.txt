@@ -1,0 +1,13 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int x = 12;
+    int *ptr = &x;
+
+    cout << *ptr << endl;  // Access the value of x through the pointer
+    *ptr += 5;             // Increment the value of x using the pointer
+    cout << *ptr << endl;  // Print the updated value of x
+
+    return 0;
+}
