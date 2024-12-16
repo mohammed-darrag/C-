@@ -1,0 +1,56 @@
+#include <iostream>
+using namespace std;
+
+class Rectangle {
+private:
+    float length;
+    float width;
+
+public:
+    // Setter for length
+    void setLength(float len) {
+        if (len >= 0)
+            length = len;
+        else
+            cout << "Error: Please enter a positive value for length." << "\n";
+    }
+
+    // Getter for length
+    float getLength() {
+        return length;
+    }
+
+    // Setter for width
+    void setWidth(float wid) {
+        if (wid >= 0)
+            width = wid;
+        else
+            cout << "Error: Please enter a positive value for width." << "\n";
+    }
+
+    // Getter for width
+    float getWidth() {
+        return width;
+    }
+
+    // Method to calculate area
+    float getArea() {
+        return length * width;
+    }
+};
+
+int main() {
+    Rectangle r1;
+
+    // Set the length and width of the rectangle
+    r1.setLength(40.5);  // Valid input
+    r1.setWidth(20.5);   // Valid input
+
+    // Display the rectangle's area
+    cout << "The rectangle area is: " << r1.getArea() << "\n";
+
+    // Example of invalid input
+    r1.setLength(-10);  // Invalid input, triggers error message
+
+    return 0;
+}
