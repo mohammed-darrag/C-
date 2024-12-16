@@ -1,0 +1,29 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+struct employee {
+    int emp_num;
+    string fname;
+    string lastname;
+    float salary;
+    float bonus;
+    float net_salary; 
+};
+
+int main() {
+    employee e1, e2;
+
+    e1.emp_num = 10;
+    e1.fname = "John";
+    e1.lastname = "Doe";
+    e1.salary = 50000.0;
+    e1.bonus = 500.0;
+    e1.net_salary = e1.salary + e1.bonus;
+
+    e2 = e1;  // Copy structure data
+    cout << e2.fname << " " << e2.lastname << "\n";
+
+    return 0;
+}
