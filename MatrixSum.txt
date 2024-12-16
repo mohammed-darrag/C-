@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int matrix[5][3];
+    int sum = 0, sumdiagonal = 0;
+
+    for (int row = 0; row < 4; row++) {
+        for (int col = 0; col < 3; col++) {
+            cout << "Enter the value of item " << row << col << "\n";
+            cin >> matrix[row][col];
+        }
+    }
+
+    for (int row = 0; row < 4; row++) {
+        for (int col = 0; col < 3; col++) {
+            sum += matrix[row][col];
+            if (row == col) {
+                sumdiagonal += matrix[row][col];
+            }
+        }
+    }
+
+    cout << "Sum of all elements in the matrix is " << sum << "\n";
+    cout << "Sum of diagonal elements in the matrix is " << sumdiagonal << "\n";
+    return 0;
+}

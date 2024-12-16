@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+
+void print_2dmatrix(int arr[][3], int rows);
+
+int main() {
+    int matrix[5][3];
+
+    for (int row = 0; row < 4; row++) {
+        for (int col = 0; col < 3; col++) {
+            cout << "Enter the value of item " << row << col << "\n";
+            cin >> matrix[row][col];
+        }
+    }
+
+    print_2dmatrix(matrix, 5);
+
+    return 0;
+}
+
+void print_2dmatrix(int arr[][3], int rows) {
+    for (int row = 0; row < rows; row++) {
+        for (int col = 0; col < 3; col++) {
+            cout << arr[row][col] << "\t";
+        }
+        cout << "\n";
+    }
+}

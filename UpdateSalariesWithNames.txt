@@ -1,0 +1,32 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    float sum = 0.0;
+    float salaries[10];
+    string names[10];
+
+    for (int i = 0; i < 10; i++) {
+        cout << "Enter the name of employee no: " << i + 1 << "\n";
+        cin >> names[i];
+        cout << "Enter the salary of " << names[i] << ":\n";
+        cin >> salaries[i];
+    }
+
+    for (int index = 0; index < 10; index++) {
+        salaries[index] += salaries[index] * 0.10;
+    }
+
+    for (int j = 0; j < 10; j++) {
+        sum += salaries[j];
+    }
+
+    cout << "The average salary is " << sum / 10 << "\n";
+
+    for (int k = 0; k < 10; k++) {
+        cout << "The updated salary of " << names[k] << " is: " << salaries[k] << "\n";
+    }
+
+    return 0;
+}

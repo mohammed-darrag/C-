@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    float sum = 0.0;
+    float salaries[10];
+
+    for (int i = 0; i < 10; i++) {
+        cout << "Enter the salary of employee no: " << i + 1 << "\n";
+        cin >> salaries[i];
+    }
+
+    for (int index = 0; index < 10; index++) {
+        salaries[index] += salaries[index] * 0.10;  // Increase salary by 10%
+    }
+
+    for (int j = 0; j < 10; j++) {
+        sum += salaries[j];  // Calculate total salary
+    }
+
+    cout << "The average salary is " << sum / 10 << "\n";
+    return 0;
+}
