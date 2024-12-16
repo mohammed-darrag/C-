@@ -1,0 +1,23 @@
+
+#include "car.h"
+#include <iostream>
+using namespace std;
+
+int main() {
+
+    car myCar("opel", 2025, "blue");
+
+    cout << "Maker: " << myCar.getmaker() << endl;
+    cout << "Model: " << myCar.getmodel() << endl;
+    cout << "Color: " << myCar.getcolor() << endl;
+
+    car myCar2;
+    cout << "Maker: " << myCar2.getmaker() << endl;
+    cout << "Model: " << myCar2.getmodel() << endl;
+    cout << "Color: " << myCar2.getcolor() << endl;
+
+
+  
+
+    return 0;
+}
