@@ -1,0 +1,20 @@
+#include "car.h"
+#include <iostream>
+using namespace std;
+
+int main() {
+    car myCar;
+
+    // Set car attributes
+    myCar.setmaker("Toyota");
+    myCar.setmodel(2022);
+    myCar.setcolor("Red");
+
+    // Display car details
+    cout << "Car Details:" << endl;
+    cout << "Maker: " << myCar.getmaker() << endl;
+    cout << "Model: " << myCar.getmodel() << endl;
+    cout << "Color: " << myCar.getcolor() << endl;
+
+    return 0;
+}
