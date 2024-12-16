@@ -1,0 +1,87 @@
+/*
+#include <iostream>
+
+int main()
+{
+    int counter = 1;
+    int grade = 0, sum = 0;
+
+    while (counter <= 6) {
+        std::cout << "Enter grade for student number " << counter << "\n";
+        std::cin >> grade;
+        sum += grade;   // sum = sum + grade;
+        counter++;
+    }
+
+    std::cout << "Average grade = " << sum / 6 << "\n";  // Divide sum by 6 (number of students)
+
+    return 0;
+}
+*/
+
+/*
+#include <iostream>
+
+int main()
+{
+    int number = 0, sum = 0;
+
+    while (number >= 0) {
+        std::cout << "Enter positive numbers to sum (enter a negative number to stop): \n";
+        std::cin >> number;
+
+        if (number >= 0) {  // Only add positive numbers to the sum
+            sum += number;
+        }
+    }
+
+    std::cout << "Sum = " << sum << "\n";
+
+    return 0;
+}
+*/
+
+/*
+#include <iostream>
+
+int main()
+{
+    int grade = 0, counter = 1, sum = 0;
+
+    std::cout << "Enter 5 grades or -1 to exit \n";
+
+    while (counter <= 5 && grade != -1) {
+        std::cin >> grade;
+        sum += grade;
+        counter++;
+    }
+
+    // Adjust sum by subtracting -1 if the loop exited because of -1
+    if (grade == -1) {
+        sum += 1;  // Since -1 was added to sum, we add 1 to correct it
+    }
+
+    std::cout << "The sum of grades is " << sum << "\n";
+
+    return 0;
+}
+*/
+
+#include <iostream>
+
+int main()
+{
+    int grade = 0, counter = 1, sum = 0;  // Initialize counter to 1
+
+    std::cout << "Enter 6 grades \n";
+
+    do {
+        std::cin >> grade;
+        sum += grade;
+        counter++;
+    } while (counter <= 6);  // Corrected condition to check if counter is <= 6
+
+    std::cout << "The sum of grades is " << sum << "\n";
+
+    return 0;
+}

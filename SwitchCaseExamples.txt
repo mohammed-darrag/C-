@@ -1,0 +1,83 @@
+/*
+#include <iostream>
+
+int main()
+{
+    int i;
+    std::cout << "Please enter the value of i: " << "\n";
+    std::cin >> i;
+
+    switch (i) {
+        case 10:
+            std::cout << "i is 10" << "\n";
+            break;
+        case 20:
+            std::cout << "i is 20" << "\n";
+            break;
+        case 30:
+            std::cout << "i is 30" << "\n";
+            break;
+        case 40:
+            std::cout << "i is 40" << "\n";
+            break;
+        default:
+            std::cout << "i is not 10, 20, 30, or 40" << "\n";
+    }
+
+    return 0;
+}
+*/
+
+/*
+#include <iostream>
+
+int main()
+{
+    char ch = 'x';
+
+    switch (ch) {
+        case 'v':
+            std::cout << "I'm in case v" << "\n";
+            break;
+        case 'm':
+            std::cout << "I'm in case m" << "\n";
+            break;
+        case 'b':
+            std::cout << "I'm in case b" << "\n";
+            break;
+        case 'x':
+            std::cout << "I'm in case x" << "\n";
+            break;
+        default:
+            std::cout << "You are in the default case" << "\n";
+    }
+
+    return 0;
+}
+*/
+
+#include <iostream>
+
+int main()
+{
+    int i;
+    std::cout << "Please enter the value of i: " << "\n";
+    std::cin >> i;
+
+    switch (i) {
+        case 10:
+        case 20:
+            std::cout << "Please work in case 10 or 20" << "\n";  // Demonstrating fall-through behavior
+            break;
+        case 30:
+            std::cout << "i is 30" << "\n";
+            break;
+        case 40:
+            std::cout << "i is 40" << "\n";
+            break;
+        default:
+            std::cout << "i is not 10, 20, 30, or 40" << "\n";
+    }
+
+    return 0;
+}

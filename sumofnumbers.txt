@@ -1,0 +1,17 @@
+#include <iostream>
+
+int main() {
+    int count = 1, sum = 0, val;
+
+    std::cout << "Enter the number till which the sum is calculated: ";
+    std::cin >> val;
+
+    while (count <= val) {
+        sum += count; // sum = sum + count
+        count += 1;
+    }
+
+    std::cout << "Sum of 1 to " << val << " = " << sum << std::endl;
+
+    return 0;
+}

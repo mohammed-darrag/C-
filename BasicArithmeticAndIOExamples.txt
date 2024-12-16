@@ -1,0 +1,63 @@
+/*
+#include <iostream>  // Include the input-output stream library
+
+int main()  // Main function, the entry point of the program
+{
+    int a = 5;  // Declare and initialize an integer variable 'a' with the value 5
+    int b = 8;  // Declare and initialize an integer variable 'b' with the value 8
+    int c = 10; // Declare and initialize an integer variable 'c' with the value 10
+
+    std::cout << "c" << std::endl;  // Output the value of 'c' (10) followed by a newline
+
+    return 0;  // Return 0 to indicate that the program ended successfully
+}
+*/
+
+/*
+#include <iostream>  // Include the input-output stream library
+
+int main()  // Main function, the entry point of the program
+{
+    int a = 5;  // Declare and initialize an integer variable 'a' with the value 5
+    int b = 8;  // Declare and initialize an integer variable 'b' with the value 8
+    int c = 10; // Declare and initialize an integer variable 'c' with the value 10
+
+    std::cout << a << b << c << "\n";  // Output the values of 'a', 'b', and 'c' followed by a newline
+
+    return 0;  // Return 0 to indicate that the program ended successfully
+}
+*/
+
+/*
+#include <iostream>  // Include the input-output stream library
+
+int main()  
+{
+    int a = 5;  
+    int b = 8;  
+    int c = 10; 
+    float average;
+
+    average = (a + b + c) / 3.0;  // Or average = (a + b + c) / float(3);
+    std::cout << "The average of the numbers is: " << average << std::endl;
+
+    return 0;  
+}
+*/
+
+#include <iostream>  // Include the input-output stream library
+
+int main()  
+{
+    int i = 5;
+    int j = 3;
+    float div;
+
+    // This output will be 1 because the result of the division comes from int divided by int.
+    // If div = float(i) / j, the answer will promote to float. This is called casting.
+    div = i / j;
+
+    std::cout << "The division of i and j is: " << div << std::endl;
+
+    return 0;  
+}

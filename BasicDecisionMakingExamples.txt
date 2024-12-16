@@ -1,0 +1,68 @@
+/*
+#include <iostream>
+
+int main()  // Ensure that main has parentheses
+{ 
+    int grade = 0;
+    std::cout << "Enter your grade: " << "\n";
+
+    std::cin >> grade;
+    
+    if (grade >= 60) {
+       std::cout << "Succeeded" << "\n";
+       std::cout << "Go to the next level" << "\n";
+    }
+
+    return 0;
+}
+*/
+
+/*
+#include <iostream>
+
+int main()  
+{ 
+    int markus = 0;
+    std::cout << "Enter your grade: " << "\n";
+    std::cin >> markus;
+
+    if (markus >= 90 && markus <= 100) {
+        std::cout << "A" << "\n";
+    } else if (markus >= 80 && markus < 90) {
+        std::cout << "B" << "\n";
+    } else if (markus >= 70 && markus < 80) {
+        std::cout << "C" << "\n";
+    } else if (markus >= 60 && markus < 70) {
+        std::cout << "D" << "\n";
+    } else {
+        std::cout << "F" << "\n";
+    }
+
+    return 0;
+}
+*/
+
+#include <iostream>
+
+int main()
+{ 
+    int age;
+    char marital, sex;
+
+    std::cout << "Enter your marital status (y for married, n for not married): " << "\n";
+    std::cin >> marital;
+
+    std::cout << "Enter your sex (m for male, f for female): " << "\n";
+    std::cin >> sex;
+
+    std::cout << "Enter your age: " << "\n";
+    std::cin >> age;
+
+    if (age >= 18 && marital == 'y' && sex == 'm') {
+        std::cout << "You are eligible to vote." << "\n";
+    } else {
+        std::cout << "You are not eligible to vote." << "\n";
+    }
+
+    return 0;
+}
