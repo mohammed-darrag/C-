@@ -1,0 +1,24 @@
+#include <iostream>
+
+int sum(int num1, int num2, int num3);
+float average(int num1, int num2, int num3);
+
+int main() {
+    int n1, n2, n3;
+
+    std::cout << "Please enter 3 integer numbers: \n";
+    std::cin >> n1 >> n2 >> n3;
+
+    std::cout << "The sum of the 3 numbers is " << sum(n1, n2, n3) << "\n";
+    std::cout << "The average of the 3 numbers is " << average(n1, n2, n3) << "\n";
+
+    return 0;
+}
+
+int sum(int num1, int num2, int num3) {
+    return num1 + num2 + num3;
+}
+
+float average(int num1, int num2, int num3) {
+    return (num1 + num2 + num3) / 3.0;
+}

@@ -1,0 +1,24 @@
+#include <iostream>
+
+float area(int radius);
+float volume(int radius);
+
+int main() {
+    int r;
+
+    std::cout << "Enter the radius of the sphere: \n";
+    std::cin >> r;
+
+    std::cout << "The area of the sphere is " << area(r) << "\n";
+    std::cout << "The volume of the sphere is " << volume(r) << "\n";
+
+    return 0;
+}
+
+float area(int radius) {
+    return 4 * 3.14 * radius * radius;
+}
+
+float volume(int radius) {
+    return (4 / 3.0) * 3.14 * radius * radius * radius;
+}

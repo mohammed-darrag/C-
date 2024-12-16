@@ -1,0 +1,20 @@
+#include <iostream>
+
+int large(int num1, int num2);
+
+int main() {
+    int n1, n2, result;
+
+    std::cout << "Enter two integer numbers: \n";
+    std::cin >> n1 >> n2;
+
+    result = large(n1, n2);
+
+    std::cout << "The largest number is " << result << "\n";
+
+    return 0;
+}
+
+int large(int num1, int num2) {
+    return (num1 >= num2) ? num1 : num2;
+}
