@@ -1,0 +1,18 @@
+#include "car.h"
+#include <iostream>
+using namespace std;
+
+int main() {
+    // Create car objects and observe counter behavior
+    car c1;
+    cout << "Counter reached: " << c1.car_counter() << "\n";
+
+    car c2;
+    cout << "Counter reached: " << c2.car_counter() << "\n";
+
+    car c3;
+    cout << "Counter reached: " << c3.car_counter() << "\n";
+
+    // End of scope for c3, c2, and c1 (destructors will be called)
+    return 0;
+}
