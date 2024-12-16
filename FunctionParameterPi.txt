@@ -1,0 +1,24 @@
+#include <iostream>
+
+float sphere_area(int radius, float pi);
+float sphere_volume(int radius, float pi);
+
+int main() {
+    const float pi = 3.14;  // Local constant
+
+    int radius;
+    std::cout << "Enter the radius of the sphere: ";
+    std::cin >> radius;
+    std::cout << "Surface area of the sphere: " << sphere_area(radius, pi) << "\n";
+    std::cout << "Volume of the sphere: " << sphere_volume(radius, pi) << "\n";
+
+    return 0;
+}
+
+float sphere_area(int radius, float pi) {
+    return 4 * pi * radius * radius;
+}
+
+float sphere_volume(int radius, float pi) {
+    return (4.0 / 3.0) * pi * radius * radius * radius;
+}

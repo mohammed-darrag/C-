@@ -1,0 +1,32 @@
+#include <iostream>
+#include <string>
+
+void issue_ticket(int flight_no, std::string pname, int &ticket_no);
+
+int main() {
+    static int ticket_no = 0;  // Static variable, local to main
+
+    int flight_no = 125;
+    std::string name;
+
+    std::cout << "Enter your name as written in your passport:\n";
+    std::cin >> name;
+    issue_ticket(flight_no, name, ticket_no);
+
+    std::cout << "Enter your name as written in your passport:\n";
+    std::cin >> name;
+    issue_ticket(flight_no, name, ticket_no);
+
+    std::cout << "Enter your name as written in your passport:\n";
+    std::cin >> name;
+    issue_ticket(flight_no, name, ticket_no);
+
+    return 0;
+}
+
+void issue_ticket(int flight_no, std::string pname, int &ticket_no) {
+    std::cout << "\t\t*** Ticket Issued ***\n";
+    std::cout << "Flight No: " << flight_no << "\n";
+    std::cout << "Ticket No: " << ++ticket_no << "\n";
+    std::cout << "Issued For: " << pname << "\n\n";
+}

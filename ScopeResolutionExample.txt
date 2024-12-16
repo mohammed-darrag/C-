@@ -1,0 +1,23 @@
+#include <iostream>
+
+int x = 100;
+
+int main() {
+    int x = 10;
+    int y = 50;
+    std::cout << "Value of global x is " << ::x << "\n";  // Access global x
+    std::cout << "Value of local x is " << x << "\n";     // Access local x
+    {
+        int x, z;
+        z = 100;
+        y = 100;
+        x = 250;
+
+        std::cout << "Value of x inside block " << x << "\n";  // 250
+        std::cout << "Value of global x " << ::x << "\n";      // 100
+        std::cout << "Value of y inside block " << y << "\n";  // 100
+        std::cout << "Value of z inside block " << z << "\n";  // 100
+    }
+
+    return 0;
+}
