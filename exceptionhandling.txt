@@ -1,0 +1,121 @@
+#include <iostream>
+using namespace std;
+
+void handleStdException();
+void handleIntegerException();
+void handleMultipleExceptions();
+
+int main()
+{
+    int choice;
+    cout << "Choose a program to execute:" << endl;
+    cout << "1. Exception Handling with std::exception" << endl;
+    cout << "2. Exception Handling with Integer" << endl;
+    cout << "3. Exception Handling with Multiple Exception Types" << endl;
+    cout << "Enter your choice: ";
+    cin >> choice;
+
+    switch (choice)
+    {
+    case 1:
+        handleStdException();
+        break;
+    case 2:
+        handleIntegerException();
+        break;
+    case 3:
+        handleMultipleExceptions();
+        break;
+    default:
+        cout << "Invalid choice. Exiting." << endl;
+    }
+
+    return 0;
+}
+
+// Example 1: Using std::exception for exception handling
+void handleStdException()
+{
+    int x = 0, y = 0;
+    cout << "enter value for x and y" << endl;
+    cin >> x >> y;
+
+    try
+    {
+        if (y == 0)
+            throw exception(); // use with this exception keyword virtual funcation what
+
+        cout << x / y << endl;
+    }
+    catch (exception e)
+    {
+        cout << e.what() << "\n"; // unknown exception
+        cout << "plz review your input" << endl;
+    }
+
+    cout << "the programe contined" << endl;
+    cout << x + y + 100 << endl;
+}
+
+// Example 2: Throwing and catching an integer as an exception
+void handleIntegerException()
+{
+    int x = 0, y = 0;
+    cout << "enter value for x and y" << endl;
+    cin >> x >> y;
+
+    try
+    {
+        if (y == 0)
+            throw (500); // Throwing an integer as an exception
+
+        cout << x / y << endl;
+    }
+    catch (int n) // Catching an integer
+    {
+        cout << "division by zero exception, y must be other than zero" << "\n";
+        cout << "Error code: " << n << "\n"; // Display the integer error code
+        cout << "plz review your input" << endl;
+    }
+
+    cout << "the programe contined" << endl;
+    cout << x + y + 100 << endl;
+}
+
+// Example 3: Handling multiple exception types
+void handleMultipleExceptions()
+{
+    int x = 0, y = 0;
+    cout << "enter value for x and y" << endl;
+    cin >> x >> y;
+
+    try
+    {
+        if (x < 30)
+            throw "x exception"; // Throwing a string literal
+        if (y == 0)
+            throw (500); // throwing an integer as an exception
+
+        cout << x / y << endl;
+    }
+    catch (int n) // catching an integer
+    {
+        cout << "division by zero exception, y must be other than zero" << "\n";
+        cout << "error code: " << n << "\n"; // display the integer error code
+        cout << "plz review your input" << endl;
+    }
+    catch (const char *msg) // catching a string literal
+    {
+        cout << msg << endl;
+        cout << "x must be grater than thirty" << endl;
+        cout << "plz review your input" << endl;
+    }
+    catch (...) // general catch block
+    {
+        cout << "unhandle exception" << endl;
+        cout << "contact system admin" << endl;
+    }
+
+    cout << "the programe contined" << endl;
+    cout << x + y + 100 << endl;
+}
